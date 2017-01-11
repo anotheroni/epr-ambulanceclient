@@ -146,7 +146,7 @@ FocusEventReceiver
              for (i=0 ; newTime != null && i < times.size() ; )
              {
                 // true if times is after newTime, add a new column
-                if (newTime.compareTo(times.elementAt(i)) < 0)
+                if (newTime.compareTo((java.util.Date)times.elementAt(i)) < 0)
                 {
                    times.add(i, newTime);
                    // Add a new column to all rows
@@ -162,7 +162,8 @@ FocusEventReceiver
                       newTime = null;
                 }
                 // Same time, the "new" column already exists
-                else if (newTime.compareTo(times.elementAt(i)) == 0)
+                else if (newTime.compareTo((java.util.Date)times.elementAt(i))
+                        == 0)
                 {
                    if (it.hasNext())
                       newTime = (java.util.Date)it.next();
@@ -342,7 +343,7 @@ FocusEventReceiver
 
           // if the new date is earlier than the date before in the vector
           for (i = (col-1) ; i >= 0 &&
-                newTime.compareTo(times.elementAt(i)) < 0 ; i--)
+                newTime.compareTo((java.util.Date)times.elementAt(i)) < 0 ; i--)
           {
              times.setElementAt(times.elementAt(i), i+1);
           }
@@ -351,7 +352,7 @@ FocusEventReceiver
           
           // if the new date is later than the date after in the vector
           for (j = (col+1) ; j < times.size() &&
-                newTime.compareTo(times.elementAt(j)) > 0 ; j++)
+                newTime.compareTo((java.util.Date)times.elementAt(j)) > 0 ; j++)
           {
              times.setElementAt(times.elementAt(j), j-1);
           }
