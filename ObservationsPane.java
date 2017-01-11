@@ -184,7 +184,7 @@ public class ObservationsPane extends JPanel
       JPanel atPanel = new JPanel();
       FlowLayout atLayout = new FlowLayout(FlowLayout.LEFT, 5, 2);
       atPanel.setLayout(atLayout);
-      atPanel.setBorder(BorderFactory.createTitledBorder("Allmäntillstånd"));
+      atPanel.setBorder(BorderFactory.createTitledBorder("AllmÃ¤ntillstÃ¥nd"));
       atPanel.add(uaBt[0]);
 
       if (ps != null)
@@ -270,7 +270,7 @@ public class ObservationsPane extends JPanel
       JPanel heartPanel = new JPanel();
       FlowLayout heartLayout = new FlowLayout(FlowLayout.LEFT, 5, 2);
       heartPanel.setLayout(heartLayout);
-      heartPanel.setBorder(BorderFactory.createTitledBorder("Hjärta"));
+      heartPanel.setBorder(BorderFactory.createTitledBorder("HjÃ¤rta"));
       heartPanel.add(uaBt[2]);
 
       if (ps != null)
@@ -313,7 +313,7 @@ public class ObservationsPane extends JPanel
       FlowLayout lungsLayout = new FlowLayout(FlowLayout.LEFT, 5, 2);
       lungsPanel.setLayout(lungsLayout);
       lungsPanel.setBorder(
-            BorderFactory.createTitledBorder("Lungor/Anding/Bröstkorg"));
+            BorderFactory.createTitledBorder("Lungor/Anding/BrÃ¶stkorg"));
       lungsPanel.add(uaBt[3]);
 
       if (ps != null)
@@ -495,7 +495,7 @@ public class ObservationsPane extends JPanel
       JPanel backPanel = new JPanel();
       FlowLayout backLayout = new FlowLayout(FlowLayout.LEFT, 5, 2);
       backPanel.setLayout(backLayout);
-      backPanel.setBorder(BorderFactory.createTitledBorder("Ryggrad/Bäcken"));
+      backPanel.setBorder(BorderFactory.createTitledBorder("Ryggrad/BÃ¤cken"));
       backPanel.add(uaBt[6]);
 
       if (ps != null)
@@ -588,7 +588,7 @@ public class ObservationsPane extends JPanel
       if (ps != null)
          try { ps.close(); } catch (SQLException e) {}
 
-      paralysisBt = new JToggleButton("Förlamning");
+      paralysisBt = new JToggleButton("FÃ¶rlamning");
       paralysisBt.setMargin(ins);
       paralysisBt.setFont(dFont);
       paralysisBt.addActionListener(listener);

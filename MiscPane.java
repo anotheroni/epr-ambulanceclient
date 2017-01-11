@@ -92,7 +92,7 @@ public class MiscPane extends JPanel
       miscScrollPane.setVerticalScrollBarPolicy(
             JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
       miscScrollPane.setBorder(BorderFactory.createCompoundBorder(
-               BorderFactory.createTitledBorder("Övriga komentarer"),
+               BorderFactory.createTitledBorder("Ã–vriga komentarer"),
                miscScrollPane.getBorder()));
       miscScrollPane.setBounds(5, 10, 580, 100);
       miscScrollPane.getVerticalScrollBar().setFocusable(false);

@@ -186,7 +186,7 @@ public class AmbulanceClient implements Runnable {
             setupSSLContext();
         } catch (GeneralSecurityException gse) {
             ar.resultsFromSend(-1, -1,
-                    "Certifikatet är ogiltigt!" +
+                    "Certifikatet Ã¤r ogiltigt!" +
                     " Kan ej ansluta till servern.");
 
             log = new Log(gse.getMessage(),"AmbulanceClient/run",
@@ -196,7 +196,7 @@ public class AmbulanceClient implements Runnable {
             return;
         } catch (IOException ie) {
             ar.resultsFromSend(-1, -1,
-                    "Kunde inte läsa certifikaten");
+                    "Kunde inte lÃ¤sa certifikaten");
 
             log = new Log(ie.getMessage(), "AmbulanceClient/run",
                     "Failed to read certificates");
@@ -252,7 +252,7 @@ public class AmbulanceClient implements Runnable {
                     records.remove(r);
                 } catch(IOException ie) {
                     /*ar.resultsFromSend(-2, -2,
-                      "Fel vid sändning av data." +
+                      "Fel vid sÃ¤ndning av data." +
                       " Servern svarar inte");*/
                     if ((attempts + 1) == THRESHOLD) {
                         log = new Log(ie.getMessage(), "AmbulanceClient/run",
@@ -268,9 +268,9 @@ public class AmbulanceClient implements Runnable {
 
             if (attempts == THRESHOLD) {
                 ar.resultsFromSend(-2, -2, THRESHOLD + 
-                        " försök gjordes för att" +
+                        " fÃ¶rsÃ¶k gjordes fÃ¶r att" +
                         " skicka data till servern!\n" + 
-                        " Sändning misslyckades");
+                        " SÃ¤ndning misslyckades");
 
                 try {
                     terminate();

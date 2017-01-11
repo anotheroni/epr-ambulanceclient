@@ -108,7 +108,7 @@ public class VerifySignatureDialog extends JDialog implements AdminDialog
       if (nameFld.getText().length() <= 0)
       {
          JOptionPane.showMessageDialog(this,
-                     "Ett namn måste anges",
+                     "Ett namn mÃ¥ste anges",
                      "Inget namn", JOptionPane.ERROR_MESSAGE);
          return;
       }
@@ -118,7 +118,7 @@ public class VerifySignatureDialog extends JDialog implements AdminDialog
       if (selected.size() == 0)
       {
          JOptionPane.showMessageDialog(this,
-                     "Du måste välja minst ett medicinerings tillfälle",
+                     "Du mÃ¥ste vÃ¤lja minst ett medicinerings tillfÃ¤lle",
                      "Inga mediciner valda", JOptionPane.ERROR_MESSAGE);
          return;
       }

@@ -40,7 +40,7 @@ public class AmbulancePatientInformation implements Serializable {
         try {
             pI.personSearch(personNumber);
             personInformation = pI.getInformation();
-            message = "PNR sökningen lyckades.";
+            message = "PNR sÃ¶kningen lyckades.";
         } catch(IllegalArgumentException g) {
             failed = true;
             message = "Kunde inte hitta personnumret.";

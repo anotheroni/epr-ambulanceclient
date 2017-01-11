@@ -16,13 +16,13 @@ public class Parse {
     private JDialog dialog;
     private ImportDialogInterface importInterface;
     
-    private String param[] = {" : ", "MOTTAGEN TEXT", "FRÅN: ", "TILL: ", 
-        "Ärendenummer", "Ht-förklaring", "PRIO", "Adress", "Zon-beskrivning",
-        "Till adress", "Namn", "Personnummer", "Planerad hämtningstid",
-        "Planerad avlämningstid", "Skapande tid", "IB nummer", "Hemadress",
-        "Hemlandsting", "Besvär", "Anhörig", "K", "K1", "Koordinat", "X", "Y",
-        "Slutrapport GPS SV", "Ärende", "Inkom", "Uppdrag", "Framme", "Lastat",
-        "Lämnar", "Datum", "Prio"};
+    private String param[] = {" : ", "MOTTAGEN TEXT", "FRÃ…N: ", "TILL: ", 
+        "Ã„rendenummer", "Ht-fÃ¶rklaring", "PRIO", "Adress", "Zon-beskrivning",
+        "Till adress", "Namn", "Personnummer", "Planerad hÃ¤mtningstid",
+        "Planerad avlÃ¤mningstid", "Skapande tid", "IB nummer", "Hemadress",
+        "Hemlandsting", "BesvÃ¤r", "AnhÃ¶rig", "K", "K1", "Koordinat", "X", "Y",
+        "Slutrapport GPS SV", "Ã„rende", "Inkom", "Uppdrag", "Framme", "Lastat",
+        "LÃ¤mnar", "Datum", "Prio"};
 
     //For simulation only
     /*private int fileCount = 0;
@@ -217,14 +217,14 @@ public class Parse {
                 }
                 //Split the parameter name and value
                 splitColon = tempMessage.split(param[0]);
-                if (param[4].equals(splitColon[0])) {//Ärendenummer
+                if (param[4].equals(splitColon[0])) {//Ã„rendenummer
                     commissionNumber = splitColon[1].trim();
                     /*If commission number is more than 12 charracters
                       store only the 12 one*/
                     if (commissionNumber.length() > 12)
                         commissionNumber = commissionNumber.substring(0, 13);
 //                    System.out.println("Commission:" + commissionNumber);
-                } else if (param[5].equals(splitColon[0])) {//Ht-förklaring
+                } else if (param[5].equals(splitColon[0])) {//Ht-fÃ¶rklaring
                     splitColon[1] = parseTabAndSpace(splitColon[1], false);
                     //Find the first index of "PRIO"
                     if ((index = splitColon[1].indexOf(param[6])) != -1) {
@@ -256,7 +256,7 @@ public class Parse {
                                 alarmCause = alarmCause.substring(0, 64);
                     
 //                    System.out.println("PRIO:" + prio);
-//                    System.out.println("Ht-förklaring:" + alarmCause);
+//                    System.out.println("Ht-fÃ¶rklaring:" + alarmCause);
                 } else if (param[7].equals(splitColon[0])) {//Adress
                     address = parseTabAndSpace(splitColon[1].trim(), true);
                     //If address is longer than 64 characters, cut it
@@ -307,16 +307,16 @@ public class Parse {
                     if (personId.length() > 12)
                         personId = personId.substring(0, 12);
 //                    System.out.println("Personnummer:" + personId);
-                } else if (param[12].equals(splitColon[0])) {//hämtningstid
+                } else if (param[12].equals(splitColon[0])) {//hÃ¤mtningstid
                     pickupTime = splitColon[1].trim();
                     if(pickupTime.length() > 5)
                         pickupTime = pickupTime.substring(0, 5);
-//                    System.out.println("Planerad hämtningstid:" + pickupTime);
-                } else if (param[13].equals(splitColon[0])) {//avlämningstid
+//                    System.out.println("Planerad hÃ¤mtningstid:" + pickupTime);
+                } else if (param[13].equals(splitColon[0])) {//avlÃ¤mningstid
                     dropOffTime = splitColon[1].trim();
                     if (dropOffTime.length() > 5)
                         dropOffTime = dropOffTime.substring(0, 5);
-//                    System.out.println("Planerad avlämningstid:" + 
+//                    System.out.println("Planerad avlÃ¤mningstid:" + 
 //                            dropOffTime);
                 } else if (param[14].equals(splitColon[0])) {//Skapande tid
                     creationTime = splitColon[1].trim();
@@ -338,17 +338,17 @@ public class Parse {
                     if (homeCounty.length() > 2)
                         homeCounty = homeCounty.substring(0, 2);
 //                    System.out.println("Hemlandsting:" + homeCounty);
-                } else if (param[18].equals(splitColon[0])) {//Besvär
+                } else if (param[18].equals(splitColon[0])) {//BesvÃ¤r
                     anamnesis = parseTabAndSpace(splitColon[1].trim(), true);
                     if (anamnesis.length() > 64)
                         anamnesis = anamnesis.substring(0, 64);
-//                    System.out.println("Besvär:" + anamnesis);
-                } else if (param[19].equals(splitColon[0])) {//Anhörig
+//                    System.out.println("BesvÃ¤r:" + anamnesis);
+                } else if (param[19].equals(splitColon[0])) {//AnhÃ¶rig
                     relativeInfo = 
                         parseTabAndSpace(splitColon[1].trim(), true);
                     if (relativeInfo.length() > 64)
                         relativeInfo = relativeInfo.substring(0, 64);
-//                    System.out.println("Anhörig:" + relativeInfo);
+//                    System.out.println("AnhÃ¶rig:" + relativeInfo);
                 } else if (param[20].equals(splitColon[0])) { //K
                     k = parseTabAndSpace(splitColon[1].trim(), false);
                     if (k.length() > 64)
@@ -425,7 +425,7 @@ public class Parse {
         }
         
         /*JOptionPane.showMessageDialog(dialog,
-                "Meddelandet är lagrad i databasen");*/
+                "Meddelandet Ã¤r lagrad i databasen");*/
     }
 
     /**
@@ -490,10 +490,10 @@ public class Parse {
         }
 
         //Parse commission number
-        if ((index = message.indexOf(param[26])) != -1) {//Ärende
+        if ((index = message.indexOf(param[26])) != -1) {//Ã„rende
             commission = message.substring(index + param[26].length() + 1,
                     index + param[26].length() + 13);
-//            System.out.println("Ärende:" + commission);
+//            System.out.println("Ã„rende:" + commission);
         }
 
         //Parse alarm date and time
@@ -553,10 +553,10 @@ public class Parse {
         }
 
         //Parse handover time
-        if ((index = message.indexOf(param[31])) != -1) {//Lämnar
+        if ((index = message.indexOf(param[31])) != -1) {//LÃ¤mnar
             handoverTime = message.substring(index + param[31].length() + 1,
                     index + param[31].length() + 9);
-//            System.out.println("Lämnar:" + handoverTime);
+//            System.out.println("LÃ¤mnar:" + handoverTime);
         }
 
         //Insert the parameters into client database
@@ -611,6 +611,6 @@ public class Parse {
         }
 
         /*JOptionPane.showMessageDialog(dialog,
-                "Meddelandet är lagrad i databasen");*/
+                "Meddelandet Ã¤r lagrad i databasen");*/
     }
 }

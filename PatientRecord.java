@@ -211,10 +211,10 @@ public class PatientRecord extends JFrame implements MessageInterface
       mainPane.add(recordPane, "Journalinfo");
       mainPane.add(matasPane, "MATAS");
       mainPane.add(observationsPane, "Observationer");
-      mainPane.add(actionsPane, "≈tg‰rder");
+      mainPane.add(actionsPane, "√Ötg√§rder");
       mainPane.add(medicationPane, "Mediciner");
       mainPane.add(altParametersPane, "Patientparametrar");
-      mainPane.add(miscPane, "÷vrigt");
+      mainPane.add(miscPane, "√ñvrigt");
 
       statusFld = new StatusField(dFont);
       statusFld.setFocusable(false);

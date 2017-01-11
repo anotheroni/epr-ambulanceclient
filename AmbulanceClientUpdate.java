@@ -173,7 +173,7 @@ public class AmbulanceClientUpdate implements Runnable {
                     "Falied to close socket/streams");
             lgHandler.addLog(log);
 
-            sd.setMessage("Uppkopplingen kan inte stängas");
+            sd.setMessage("Uppkopplingen kan inte stÃ¤ngas");
         }
     }
 
@@ -211,7 +211,7 @@ public class AmbulanceClientUpdate implements Runnable {
                     "Security problem");
             lgHandler.addLog(log);
 
-            sd.setMessage("Certifikaten är ej giltiga");
+            sd.setMessage("Certifikaten Ã¤r ej giltiga");
 
             return;
         } catch (IOException ie) {
@@ -220,7 +220,7 @@ public class AmbulanceClientUpdate implements Runnable {
                     "Failed to read certificates");
             lgHandler.addLog(log);
 
-            sd.setMessage("Kunde inte läsa certifikaten");
+            sd.setMessage("Kunde inte lÃ¤sa certifikaten");
 
             return;
         }
@@ -251,7 +251,7 @@ public class AmbulanceClientUpdate implements Runnable {
                         "Failed to create socket/streams");
                 lgHandler.addLog(log);
 
-                sd.setMessage("Får ingen kontakt med servern");
+                sd.setMessage("FÃ¥r ingen kontakt med servern");
 
                 try {
                     sleep(10);
@@ -271,7 +271,7 @@ public class AmbulanceClientUpdate implements Runnable {
         if (terminateStatus)
             return;
         
-        sd.setMessage("Skickar förfråga till servern");
+        sd.setMessage("Skickar fÃ¶rfrÃ¥ga till servern");
 
         // Try to send the packet to the server
         while(!terminateStatus) {
@@ -285,7 +285,7 @@ public class AmbulanceClientUpdate implements Runnable {
                         "Failed to send the update packet");
                 lgHandler.addLog(log);
 
-                sd.setMessage("Kunde inte skicka förfrågan till servern");
+                sd.setMessage("Kunde inte skicka fÃ¶rfrÃ¥gan till servern");
                 try {
                     sleep(10);
                 } catch (InterruptedException IE) {
@@ -306,7 +306,7 @@ public class AmbulanceClientUpdate implements Runnable {
 
         if (!terminateStatus) {
             try {
-                sd.setMessage("Väntar på svar från servern");
+                sd.setMessage("VÃ¤ntar pÃ¥ svar frÃ¥n servern");
                 //read the update packet from the stream
                 updatePacket = (UpdatePacket)ois.readObject();
 
@@ -336,7 +336,7 @@ public class AmbulanceClientUpdate implements Runnable {
                 lgHandler.addLog(log);
 
                 sd.setMessage("Paket versionen i server och " +
-                        "klienten är olika");
+                        "klienten Ã¤r olika");
                 terminate();
                 return;
             }
@@ -356,7 +356,7 @@ public class AmbulanceClientUpdate implements Runnable {
                 oos.flush();
 
                 //Inform the client that the update went well
-                sd.setMessage("Synkroniseringen utförd");
+                sd.setMessage("Synkroniseringen utfÃ¶rd");
                 sd.syncComplete();
 
                 terminate();
@@ -368,7 +368,7 @@ public class AmbulanceClientUpdate implements Runnable {
 
                 /*Inform the client gui that the version can not be send 
                   to the server*/
-                sd.setMessage("Fel vid sändning av svar till servern");
+                sd.setMessage("Fel vid sÃ¤ndning av svar till servern");
                 try {
                     sleep(10);
                 } catch (InterruptedException IE) {

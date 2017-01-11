@@ -121,7 +121,7 @@ public class RecordInformationPane extends JPanel
 
       //--- Import from MOBITEX
       importInfoBt = new JButton ("Info");
-      importInfoBt.setToolTipText ("Importera larm information från mobitex");
+      importInfoBt.setToolTipText ("Importera larm information frÃ¥n mobitex");
       importInfoBt.setMargin (new Insets (1, 1, 1, 1));
       importInfoBt.setBounds (15, 20, 60, 25);
       importInfoBt.setActionCommand ("importInfo");
@@ -129,7 +129,7 @@ public class RecordInformationPane extends JPanel
       importInfoBt.setEnabled (isEditable);
 
       importTimeBt = new JButton ("Tider");
-      importTimeBt.setToolTipText ("Importera tider från mobitex");
+      importTimeBt.setToolTipText ("Importera tider frÃ¥n mobitex");
       importTimeBt.setMargin (new Insets (1, 1, 1, 1));
       importTimeBt.setBounds (90, 20, 60, 25);
       importTimeBt.setActionCommand ("importTime");
@@ -139,7 +139,7 @@ public class RecordInformationPane extends JPanel
       JPanel importPanel = new JPanel ();
       importPanel.setBounds (200, 20, 160, 50);
       importPanel.setBorder(BorderFactory.createTitledBorder(
-               "Importera från Mobitex"));
+               "Importera frÃ¥n Mobitex"));
       importPanel.setLayout (null);
 
       importPanel.add (importInfoBt);
@@ -165,7 +165,7 @@ public class RecordInformationPane extends JPanel
       prioInCBox.setEnabled(isEditable);
 
       //--- Distance
-      JLabel distanceLbl = new JLabel("Körda km");
+      JLabel distanceLbl = new JLabel("KÃ¶rda km");
       distanceLbl.setBounds (10, 75, 60, 25);
       distanceLbl.setFont(dFont);
 
@@ -210,7 +210,7 @@ public class RecordInformationPane extends JPanel
       alTmFld.setBounds (125, 20, 60, 25);
       alTmFld.setEnabled (isEditable);
 
-      JLabel avTmLbl = new JLabel("Avfärd");
+      JLabel avTmLbl = new JLabel("AvfÃ¤rd");
       avTmLbl.setBounds (10, 50, 140, 25);
       avTmLbl.setFont(dFont);
 
@@ -220,7 +220,7 @@ public class RecordInformationPane extends JPanel
       avTmFld.setBounds (125, 50, 60, 25);
       avTmFld.setEnabled (isEditable);
 
-      JLabel aaTmLbl = new JLabel("Ankomst hämtplats");
+      JLabel aaTmLbl = new JLabel("Ankomst hÃ¤mtplats");
       aaTmLbl.setBounds(10, 80, 140, 25);
       aaTmLbl.setFont(dFont);
 
@@ -230,7 +230,7 @@ public class RecordInformationPane extends JPanel
       aaTmFld.setBounds (125, 80, 60, 25);
       aaTmFld.setEnabled (isEditable);
 
-      JLabel laTmLbl = new JLabel("Avfärd hämtplats");
+      JLabel laTmLbl = new JLabel("AvfÃ¤rd hÃ¤mtplats");
       laTmLbl.setBounds(10, 110, 140, 25);
       laTmLbl.setFont(dFont);
 
@@ -240,7 +240,7 @@ public class RecordInformationPane extends JPanel
       laTmFld.setBounds (125, 110, 60, 25);
       laTmFld.setEnabled (isEditable);
  
-      JLabel ahTmLbl = new JLabel("Ankomst avlämning");
+      JLabel ahTmLbl = new JLabel("Ankomst avlÃ¤mning");
       ahTmLbl.setBounds(10, 140, 140, 25);
       ahTmLbl.setFont(dFont);
 
@@ -543,7 +543,7 @@ public class RecordInformationPane extends JPanel
       //--- Pickup panel
       JPanel pickupPanel = new JPanel();
       pickupPanel.setLayout(null);
-      pickupPanel.setBorder(BorderFactory.createTitledBorder("Hämtplats"));
+      pickupPanel.setBorder(BorderFactory.createTitledBorder("HÃ¤mtplats"));
       pickupPanel.setBounds(5,360,580,80);
 
       pickupFld.setBounds(10,50,560,25);
@@ -559,7 +559,7 @@ public class RecordInformationPane extends JPanel
       JPanel dropoffPanel = new JPanel();
       dropoffPanel.setLayout(null);
       dropoffPanel.setBorder(
-            BorderFactory.createTitledBorder("Avlämningsplats"));
+            BorderFactory.createTitledBorder("AvlÃ¤mningsplats"));
       dropoffPanel.setBounds(5,440,580,80);
 
       dropFld.setBounds(10,50,560,25);
@@ -579,7 +579,7 @@ public class RecordInformationPane extends JPanel
             BorderFactory.createTitledBorder("Patient information"));
 
       fetchInfoBt = new JButton(new ImageIcon("images/Refresh24.gif"));
-      fetchInfoBt.setToolTipText("Hämta namn från PNR");
+      fetchInfoBt.setToolTipText("HÃ¤mta namn frÃ¥n PNR");
       fetchInfoBt.setBounds(215,15,26,26);
       fetchInfoBt.setMargin(new Insets(1,1,1,1));
       fetchInfoBt.addActionListener(listener);
@@ -606,7 +606,7 @@ public class RecordInformationPane extends JPanel
       ((AbstractDocument)pnrFld.getDocument()).
          setDocumentFilter(new LimitedNumberFilter(12));
 
-      JLabel fNameLbl = new JLabel("Förnamn");
+      JLabel fNameLbl = new JLabel("FÃ¶rnamn");
       fNameLbl.setFont(dFont);
       fNameLbl.setBounds(10,45,60,25);
       fNameFld = new JTextField();
@@ -639,7 +639,7 @@ public class RecordInformationPane extends JPanel
       ((AbstractDocument)addrFld.getDocument()).
          setDocumentFilter(new LimitedTextFilter(64));
 
-      JLabel relativeLbl = new JLabel("Anhörig");
+      JLabel relativeLbl = new JLabel("AnhÃ¶rig");
       relativeLbl.setFont(dFont);
       relativeLbl.setBounds(10,135,60,25);
       relativeFld = new JTextField();
@@ -743,7 +743,7 @@ public class RecordInformationPane extends JPanel
       else
       {
          pr.setMessage(
-               "En larmtid måste finnas, den gammla tiden kommer att behållas");
+               "En larmtid mÃ¥ste finnas, den gammla tiden kommer att behÃ¥llas");
          alTmFld.setText (oldalTmStr);
       }
 
@@ -1076,12 +1076,12 @@ public class RecordInformationPane extends JPanel
          try {
             ambCliPat = new AmbulanceClientPatient(lg, pnrFld.getText(), this);
          } catch (java.util.prefs.BackingStoreException e) {
-            pr.setMessage("Kan ej läsa inställningar från registret");
+            pr.setMessage("Kan ej lÃ¤sa instÃ¤llningar frÃ¥n registret");
          }
       }
       else
          pr.setMessage(
-               "Ett personnumer måste anges för att kunna kontakta PNR");
+               "Ett personnumer mÃ¥ste anges fÃ¶r att kunna kontakta PNR");
     }
 
    /**

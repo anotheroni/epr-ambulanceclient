@@ -107,7 +107,7 @@ public class ImportTimeDialog extends JDialog implements ImportDialogInterface
       loadedDataLbl = new JLabel ();
       loadedDataLbl.setBounds (80, 110, 80, 25);
 
-      JLabel handoverLbl = new JLabel ("L‰mnar");
+      JLabel handoverLbl = new JLabel ("L√§mnar");
       handoverLbl.setBounds (10, 140, 80, 25);
       handoverDataLbl = new JLabel ();
       handoverDataLbl.setBounds (80, 140, 80, 25);
@@ -227,7 +227,7 @@ public class ImportTimeDialog extends JDialog implements ImportDialogInterface
    public void removeEntry ()
    {
       int res = JOptionPane.showConfirmDialog(this,
-            "Tiderna kommer att tas bort permanent, vill du forts‰tta?",
+            "Tiderna kommer att tas bort permanent, vill du forts√§tta?",
             "Ta bort tider", 
             JOptionPane.YES_NO_OPTION);
       if (res == JOptionPane.NO_OPTION)

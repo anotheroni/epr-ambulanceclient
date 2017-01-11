@@ -103,11 +103,11 @@ public class GCSObservationTableRow implements ObservationTableRowInterface
       try { // Check if the string contains only numbers
          iVal = Integer.parseInt(numStr, 10);
       } catch(NumberFormatException e) {
-         return "GCS måste vara ett nummer";
+         return "GCS mÃ¥ste vara ett nummer";
       }
 
       if (iVal > 8 || iVal < 1) // Check that is a valid number
-         return rowName + " måste vara mellan 1 och " + maxValue;
+         return rowName + " mÃ¥ste vara mellan 1 och " + maxValue;
 
       return gcsModel.setValue(paramId, iVal, col);
    }

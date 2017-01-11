@@ -238,7 +238,7 @@ public class BpObservationTableRow implements ObservationTableRowInterface,
       if (val != null)
       {
          if((idx = val.indexOf("/")) == -1)
-            return "Blodtrycket måste skrivas på formen systol/diastol";
+            return "Blodtrycket mÃ¥ste skrivas pÃ¥ formen systol/diastol";
          
          try {
             if (idx > 0)
@@ -246,7 +246,7 @@ public class BpObservationTableRow implements ObservationTableRowInterface,
             if (idx + 1 < val.length())
                diastolStr = val.substring(idx+1, val.length());
          } catch (IndexOutOfBoundsException e) {
-            return "Blodtrycket måste skrivas på formen systol/diastol";
+            return "Blodtrycket mÃ¥ste skrivas pÃ¥ formen systol/diastol";
          }
          try { // Check if the string contains only numbers
             if (systolStr != null)
@@ -254,7 +254,7 @@ public class BpObservationTableRow implements ObservationTableRowInterface,
             if (diastolStr != null)
                iDiastol = Integer.valueOf(diastolStr, 10);
          } catch(NumberFormatException e) {
-            return "Blodtrycket måste skrivas på formen systol/diastol";
+            return "Blodtrycket mÃ¥ste skrivas pÃ¥ formen systol/diastol";
          }
          try {
             systol.setElementAt(iSystol, col);

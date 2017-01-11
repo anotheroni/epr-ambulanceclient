@@ -57,7 +57,7 @@ public class SendDialog extends JDialog
         try {
            new AmbulanceClient(lg, parent, dbcon, t);
         } catch (Exception e) {
-           setMessage("Sändning misslyckades");
+           setMessage("SÃ¤ndning misslyckades");
            addOk();
         }
 

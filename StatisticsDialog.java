@@ -76,7 +76,7 @@ public class StatisticsDialog extends JDialog implements AdminDialog
       policeBt[1]  = new JRadioButton("Nej");
       policeBt[1].setBounds(160,10,50,25);
       policeBt[1].setEnabled(isEditable);
-      policeBt[2] = new JRadioButton("Ok‰nt");
+      policeBt[2] = new JRadioButton("Ok√§nt");
       policeBt[2].setBounds(210,10,100,25);
       policeBt[2].setEnabled(isEditable);
       policeBt[policeSel].setSelected(true);
@@ -86,7 +86,7 @@ public class StatisticsDialog extends JDialog implements AdminDialog
       policeBtGr.add(policeBt[1]);
       policeBtGr.add(policeBt[2]);
 
-      JLabel helmLbl = new JLabel("Hj‰lm");
+      JLabel helmLbl = new JLabel("Hj√§lm");
       helmLbl.setBounds(10,45,80,25);
 
       helmBt[0] = new JRadioButton("Ja");
@@ -95,7 +95,7 @@ public class StatisticsDialog extends JDialog implements AdminDialog
       helmBt[1]  = new JRadioButton("Nej");
       helmBt[1].setBounds(160,45,50,25);
       helmBt[1].setEnabled(isEditable);
-      helmBt[2] = new JRadioButton("Ok‰nt");
+      helmBt[2] = new JRadioButton("Ok√§nt");
       helmBt[2].setBounds(210,45,100,25);
       helmBt[2].setEnabled(isEditable);
       helmBt[helmSel].setSelected(true);
@@ -105,7 +105,7 @@ public class StatisticsDialog extends JDialog implements AdminDialog
       helmBtGr.add(helmBt[1]);
       helmBtGr.add(helmBt[2]);
 
-      JLabel beltLbl = new JLabel("Bilb‰lte");
+      JLabel beltLbl = new JLabel("Bilb√§lte");
       beltLbl.setBounds(10,80,80,25);
 
       beltBt[0] = new JRadioButton("Ja");
@@ -114,7 +114,7 @@ public class StatisticsDialog extends JDialog implements AdminDialog
       beltBt[1]  = new JRadioButton("Nej");
       beltBt[1].setBounds(160,80,50,25);
       beltBt[1].setEnabled(isEditable);
-      beltBt[2] = new JRadioButton("Ok‰nt");
+      beltBt[2] = new JRadioButton("Ok√§nt");
       beltBt[2].setBounds(210,80,100,25);
       beltBt[2].setEnabled(isEditable);
       beltBt[beltSel].setSelected(true);
@@ -124,7 +124,7 @@ public class StatisticsDialog extends JDialog implements AdminDialog
       beltBtGr.add(beltBt[1]);
       beltBtGr.add(beltBt[2]);
 
-      JLabel neckLbl = new JLabel("Nackstˆd");
+      JLabel neckLbl = new JLabel("Nackst√∂d");
       neckLbl.setBounds(10,115,80,25);
 
       neckBt[0] = new JRadioButton("Ja");
@@ -133,7 +133,7 @@ public class StatisticsDialog extends JDialog implements AdminDialog
       neckBt[1]  = new JRadioButton("Nej");
       neckBt[1].setBounds(160,115,50,25);
       neckBt[1].setEnabled(isEditable);
-      neckBt[2] = new JRadioButton("Ok‰nt");
+      neckBt[2] = new JRadioButton("Ok√§nt");
       neckBt[2].setBounds(210,115,100,25);
       neckBt[2].setEnabled(isEditable);
       neckBt[neckSel].setSelected(true);
@@ -143,7 +143,7 @@ public class StatisticsDialog extends JDialog implements AdminDialog
       neckBtGr.add(neckBt[1]);
       neckBtGr.add(neckBt[2]);
  
-      JLabel airLbl = new JLabel("Airbag utlˆst");
+      JLabel airLbl = new JLabel("Airbag utl√∂st");
       airLbl.setBounds(10,150,80,25);
 
       airBt[0] = new JRadioButton("Ja");
@@ -152,7 +152,7 @@ public class StatisticsDialog extends JDialog implements AdminDialog
       airBt[1]  = new JRadioButton("Nej");
       airBt[1].setBounds(160,150,50,25);
       airBt[1].setEnabled(isEditable);
-      airBt[2] = new JRadioButton("Ok‰nt");
+      airBt[2] = new JRadioButton("Ok√§nt");
       airBt[2].setBounds(210,150,100,25);
       airBt[2].setEnabled(isEditable);
       airBt[airSel].setSelected(true);

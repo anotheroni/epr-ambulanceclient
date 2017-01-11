@@ -53,9 +53,9 @@ public class EyeModel
       rows = new EyeObservationTableRow[2];
 
       rows[0] = new EyeObservationTableRow(this, 0, cboxValues,
-           "Vänster puppil");
+           "VÃ¤nster puppil");
       rows[1] = new EyeObservationTableRow(this, 1, cboxValues,
-            "Höger puppil");
+            "HÃ¶ger puppil");
 
       values = new Vector[2];
       values[0] = new Vector();

@@ -296,7 +296,7 @@ public class MATASPane extends JPanel
       foodScrollPane.setVerticalScrollBarPolicy(
             JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
       foodScrollPane.setBorder(BorderFactory.createCompoundBorder(
-               BorderFactory.createTitledBorder("Senaste Måltid"),
+               BorderFactory.createTitledBorder("Senaste MÃ¥ltid"),
                foodScrollPane.getBorder()));
       foodScrollPane.setBounds(5, 375, 580, 75);
       foodScrollPane.getVerticalScrollBar().setFocusable(false);

@@ -30,13 +30,13 @@ public class RLSObservationTableRow implements ObservationTableRowInterface
 
    private String[] rlsValues = {
       "1 - Vaken orienterad",
-      "2 - Vaken slö eller oklar",	  
-      "3 - Vaken mycket slö eller oklar, avvärjer smärta",
-      "4 - Medvetslös, lokaliserar smärta, men avvärjer ej smärta",
-      "5 - Medvetslös, undandrar sig smörta",
-      "6 - Medvetslös, böjrörelser vid smärta",
-      "7 - Medvetslös, sträckrörelser vid smärta",
-      "8 - Medvetslös, ingen smärtreaktion"
+      "2 - Vaken slÃ¶ eller oklar",
+      "3 - Vaken mycket slÃ¶ eller oklar, avvÃ¤rjer smÃ¤rta",
+      "4 - MedvetslÃ¶s, lokaliserar smÃ¤rta, men avvÃ¤rjer ej smÃ¤rta",
+      "5 - MedvetslÃ¶s, undandrar sig smÃ¶rta",
+      "6 - MedvetslÃ¶s, bÃ¶jrÃ¶relser vid smÃ¤rta",
+      "7 - MedvetslÃ¶s, strÃ¤ckrÃ¶relser vid smÃ¤rta",
+      "8 - MedvetslÃ¶s, ingen smÃ¤rtreaktion"
    };
 
    private BigComboBox combo;
@@ -229,7 +229,7 @@ public class RLSObservationTableRow implements ObservationTableRowInterface
       try { // Check if the string contains only numbers
          iVal = Integer.parseInt(numStr, 10);
       } catch(NumberFormatException e) {
-         return "RLS måste vara ett nummer";
+         return "RLS mÃ¥ste vara ett nummer";
       }
 
       if (iVal > 8 || iVal < 1) // Check that is a valid number

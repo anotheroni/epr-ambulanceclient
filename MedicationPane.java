@@ -75,7 +75,7 @@ public class MedicationPane extends JPanel implements FocusEventReceiver
       MedicationPane_Listener listener = new MedicationPane_Listener(this);
  
       //--- Delegating doctor
-      JLabel delDoctorLbl = new JLabel("Delegerande l‰kare");
+      JLabel delDoctorLbl = new JLabel("Delegerande l√§kare");
       delDoctorLbl.setBounds(10, 15, 130, 25);
 
       delDoctorFld = new JTextField();
@@ -207,7 +207,7 @@ public class MedicationPane extends JPanel implements FocusEventReceiver
          new AutoComplete_Listener(effectFld, wl, userId);
       effectFld.addKeyListener(effectFldListener);     
 
-      addEffectBt = new JButton("L‰gg till");
+      addEffectBt = new JButton("L√§gg till");
       addEffectBt.setBounds(480,20,80,25);
       addEffectBt.addActionListener(listener);
       addEffectBt.setActionCommand("addeffect");
@@ -325,13 +325,13 @@ public class MedicationPane extends JPanel implements FocusEventReceiver
    {
       if (effectFld.getText().length() < 1)
       {
-         pr.setMessage("Ingen effekt ‰r angiven");
+         pr.setMessage("Ingen effekt √§r angiven");
          return;
       }
       int medId = medicationTModel.getRowId(medicationTable.getSelectedRow());
       if (medId == -1)
       {
-         pr.setMessage("Igen medicinering ‰r vald");
+         pr.setMessage("Igen medicinering √§r vald");
          return;
       }
       try {
@@ -357,7 +357,7 @@ public class MedicationPane extends JPanel implements FocusEventReceiver
       int medId = medicationTModel.getRowId(medicationTable.getSelectedRow());
       if (medId == -1)
       {
-         pr.setMessage("Ignen medicinering ‰r vald");
+         pr.setMessage("Ignen medicinering √§r vald");
          return;
       }
       try {

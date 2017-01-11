@@ -83,7 +83,7 @@ public class AltPatientParametersPane extends JPanel
 
       JButton addColumnBt = new JButton("Ny observation");
       addColumnBt.setBounds(5,10,120,25);
-      addColumnBt.setToolTipText("Lägg till en ny observation");
+      addColumnBt.setToolTipText("LÃ¤gg till en ny observation");
       addColumnBt.addActionListener(listener);
       addColumnBt.setActionCommand("addColumn");
       addColumnBt.setEnabled(isEditable);
@@ -135,10 +135,10 @@ public class AltPatientParametersPane extends JPanel
       addAllBt.addActionListener(listener);
       addAllBt.setActionCommand("showAll");
 
-      JButton hideAllBt = new JButton("Dölj alla");
+      JButton hideAllBt = new JButton("DÃ¶lj alla");
       hideAllBt.setSize(90,25);
       hideAllBt.setMargin(ins);
-      hideAllBt.setToolTipText("Dölj alla parametrar");
+      hideAllBt.setToolTipText("DÃ¶lj alla parametrar");
       hideAllBt.addActionListener(listener);
       hideAllBt.setActionCommand("hideAll");
 

@@ -93,7 +93,7 @@ public class DB2Connect implements Runnable {
 
                         sql = sql.getNextException();
                     }//while
-                    message = "Kan inte få kontakt med databasen";
+                    message = "Kan inte fÃ¥ kontakt med databasen";
                 }//if
 
                 if (!remote) {

@@ -29,9 +29,9 @@ public class EyesPanel extends JPanel
          pupilImgs[i].setDescription(pupilSizes[i]);
       }
 
-      JLabel leftLbl = new JLabel("Vänster");
+      JLabel leftLbl = new JLabel("VÃ¤nster");
       leftLbl.setBounds(10, 15, 70, 25);
-      JLabel rightLbl = new JLabel("Höger");
+      JLabel rightLbl = new JLabel("HÃ¶ger");
       rightLbl.setBounds(130, 15, 70, 25);
 
       // Create the combo box
@@ -57,7 +57,7 @@ public class EyesPanel extends JPanel
 
       setLayout(null);
       setSize(250,180);
-      setBorder(BorderFactory.createTitledBorder("Ögon status"));
+      setBorder(BorderFactory.createTitledBorder("Ã–gon status"));
 
       add(leftLbl);
       add(rightLbl);

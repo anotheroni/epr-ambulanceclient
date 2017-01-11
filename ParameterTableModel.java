@@ -335,7 +335,7 @@ FocusEventReceiver
           try {
              newTime = formatter.parse((String)value);
           } catch (ParseException e) {
-             pr.setMessage("Observations tiden måste ha formen TT:MM");
+             pr.setMessage("Observations tiden mÃ¥ste ha formen TT:MM");
              setValueAtFailed = true;
              return;
           }

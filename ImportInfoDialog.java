@@ -96,13 +96,13 @@ public class ImportInfoDialog extends JDialog implements ImportDialogInterface
       infoPanel.setLayout (null);
       infoPanel.setBounds (100, 0, 400, /*300*/410);
 
-      JLabel commissionLbl = new JLabel ("Ärendenummer");
+      JLabel commissionLbl = new JLabel ("Ã„rendenummer");
       commissionLbl.setBounds (10, 15, 110, 20);
       commissionDataLbl = new JLabel ();
       commissionDataLbl.setBounds (110, 15, 120, 20);
       commissionDataLbl.setFont (dFont);
 
-      JLabel alarmLbl = new JLabel ("Ht-förklaring");
+      JLabel alarmLbl = new JLabel ("Ht-fÃ¶rklaring");
       alarmLbl.setBounds (10, 40, 80, 20);
       alarmDataLbl = new JLabel ();
       alarmDataLbl.setBounds (90, 40, 300, 20);
@@ -141,7 +141,7 @@ public class ImportInfoDialog extends JDialog implements ImportDialogInterface
       personidDataLbl.setBounds (90, 190, 100, 20);
       personidDataLbl.setFont (dFont);
 
-      JLabel fNameLbl = new JLabel("Förnamn");
+      JLabel fNameLbl = new JLabel("FÃ¶rnamn");
       fNameLbl.setBounds(10, 215, 80, 20);
       fNameDataLbl = new JLabel();
       fNameDataLbl.setBounds(90, 215, 100, 20);
@@ -165,13 +165,13 @@ public class ImportInfoDialog extends JDialog implements ImportDialogInterface
       homeCountyDataLbl.setBounds(90, 290, 50, 20);
       homeCountyDataLbl.setFont(dFont);
 
-      JLabel relativeLbl = new JLabel("Anhörig");
+      JLabel relativeLbl = new JLabel("AnhÃ¶rig");
       relativeLbl.setBounds(10, 315, 80, 20);
       relativeDataLbl = new JLabel();
       relativeDataLbl.setBounds(90, 315, 300, 20);
       relativeDataLbl.setFont(dFont);
 
-      JLabel anamnesisLbl = new JLabel("Besvär");
+      JLabel anamnesisLbl = new JLabel("BesvÃ¤r");
       anamnesisLbl.setBounds(10, 340, 80, 20);
       anamnesisDataLbl = new JLabel();
       anamnesisDataLbl.setBounds(90, 340, 300, 20);
@@ -296,7 +296,7 @@ public class ImportInfoDialog extends JDialog implements ImportDialogInterface
    public void removeEntry ()
    {
       int res = JOptionPane.showConfirmDialog(this,
-            "Informationen kommer att tas bort permanent, vill du fortsätta?",
+            "Informationen kommer att tas bort permanent, vill du fortsÃ¤tta?",
             "Ta bort information", 
             JOptionPane.YES_NO_OPTION);
       if (res == JOptionPane.NO_OPTION)

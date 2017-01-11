@@ -20,8 +20,8 @@ public class ActionsPane extends JPanel
    private final int TEXTFLDLENGTH = 20;
 
    private final String[] NAMES = {
-      "Allm‰ntillstÂnd", "Huvud/Halsrygg",
-      "Hj‰rta", "Lungor/Andning/Brˆstkorg", "Extrimiteter", "Ryggrad/B‰cken",
+      "Allm√§ntillst√•nd", "Huvud/Halsrygg",
+      "Hj√§rta", "Lungor/Andning/Br√∂stkorg", "Extrimiteter", "Ryggrad/B√§cken",
       "Neurologi"
    };
 

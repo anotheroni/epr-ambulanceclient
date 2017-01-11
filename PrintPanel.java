@@ -144,9 +144,9 @@ public class PrintPanel extends JPanel implements Printable, MessageInterface
       DecimalFormat df = new DecimalFormat("0.00", dfs);
 
       carerStr = new StringBuffer(80);
-      carerStr.append("Vårdare: ");
+      carerStr.append("VÃ¥rdare: ");
       driverStr = new StringBuffer(80);
-      driverStr.append("Förare: ");
+      driverStr.append("FÃ¶rare: ");
       diagnosisStr = new StringBuffer(60);
 
       dateFormat = new SimpleDateFormat("yyyy-MM-dd");
@@ -192,7 +192,7 @@ public class PrintPanel extends JPanel implements Printable, MessageInterface
                   "PrintPanel/PrintPanel",
                   "Read record information"));
          if (station == null)
-            station = "Okänd station";
+            station = "OkÃ¤nd station";
       }
 
       // Patient info
@@ -303,25 +303,25 @@ public class PrintPanel extends JPanel implements Printable, MessageInterface
             switch (right)
             {
                case 1:
-                  po.addExamination("Förlamad höger arm");
+                  po.addExamination("FÃ¶rlamad hÃ¶ger arm");
                   break;
                case 2:
-                  po.addExamination("Förlamad höger ben");
+                  po.addExamination("FÃ¶rlamad hÃ¶ger ben");
                   break;
                case 3:
-                  po.addExamination("Förlamad höger sida");
+                  po.addExamination("FÃ¶rlamad hÃ¶ger sida");
                   break;
             }
             switch (left)
             {
                case 1:
-                  po.addExamination("Förlamad vänster arm");
+                  po.addExamination("FÃ¶rlamad vÃ¤nster arm");
                   break;
                case 2:
-                  po.addExamination("Förlamad vänster ben");
+                  po.addExamination("FÃ¶rlamad vÃ¤nster ben");
                   break;
                case 3:
-                  po.addExamination("Förlamad vänster sida");
+                  po.addExamination("FÃ¶rlamad vÃ¤nster sida");
                   break;
             }
          }
@@ -884,7 +884,7 @@ public class PrintPanel extends JPanel implements Printable, MessageInterface
          g.drawLine(1, yPos, 320/*353*/, yPos);
          yPos += EXT_ROW_HEIGHT;
          g.drawString("Personnummer: " + pNumber, 2, yPos-2);
-         g.drawString("Hämtning: " + pickupTime, 322/*357*/, yPos-2);
+         g.drawString("HÃ¤mtning: " + pickupTime, 322/*357*/, yPos-2);
          //g.drawLine(1, yPos, 353, yPos);
          //g.drawLine(355, yPos-2, width, yPos-2);
  
@@ -901,7 +901,7 @@ public class PrintPanel extends JPanel implements Printable, MessageInterface
          //g.drawLine(1, yPos, width, yPos);
  
          yPos += EXT_ROW_HEIGHT;
-         g.drawString("Anhörig: " + relative, 2, yPos-2);
+         g.drawString("AnhÃ¶rig: " + relative, 2, yPos-2);
          g.drawLine(1, yPos, width, yPos);
 
          // Alarm cause
@@ -985,7 +985,7 @@ public class PrintPanel extends JPanel implements Printable, MessageInterface
          {
             yPos += EXT_ROW_HEIGHT;
             g.setFont(bold10);
-            g.drawString("Senaste måltid", 3, yPos);
+            g.drawString("Senaste mÃ¥ltid", 3, yPos);
             g.setFont(norm10);
             for (int i=0 ; i < foodVec.size() ; i++)
             {
@@ -1052,7 +1052,7 @@ public class PrintPanel extends JPanel implements Printable, MessageInterface
 
             yPos += EXX_ROW_HEIGHT;
             g.setFont(bold12);
-            g.drawString("Åtgärder", 3, yPos - 1);
+            g.drawString("Ã…tgÃ¤rder", 3, yPos - 1);
             g.setFont(norm10);
             if (actionVec != null)
             {
@@ -1082,12 +1082,12 @@ public class PrintPanel extends JPanel implements Printable, MessageInterface
          {
             yPos += EXX_ROW_HEIGHT;
             g.setFont(bold12);
-            g.drawString("Läkemedel", 3, yPos - 1);
+            g.drawString("LÃ¤kemedel", 3, yPos - 1);
             g.setFont(norm10);
             if (doctorStr != null && doctorStr.length() > 0)
             {
                yPos += STD_ROW_HEIGHT;
-               g.drawString("Delegerande läkare: " + doctorStr, 3, yPos - 1);
+               g.drawString("Delegerande lÃ¤kare: " + doctorStr, 3, yPos - 1);
             }
             Print_Medicine pm;
             for (int i=0 ; i < medicinesVec.size() ; i++)
@@ -1201,28 +1201,28 @@ public class PrintPanel extends JPanel implements Printable, MessageInterface
          g.drawString("L = Luxation", 220, yPos + EXT_ROW_HEIGHT);
 
          if (perfPuls[0] == 1)   // right arm, yes
-            g.drawString("Perferiell puls i höger arm", 220,
+            g.drawString("Perferiell puls i hÃ¶ger arm", 220,
                  yPos + (4 * EXT_ROW_HEIGHT));
          else if (perfPuls[0] == 2) // right arm, no
-            g.drawString("IGEN perferiell puls i höger arm", 220,
+            g.drawString("IGEN perferiell puls i hÃ¶ger arm", 220,
                   yPos + (4 * EXT_ROW_HEIGHT));
          if (perfPuls[1] == 1)   // left arm, yes
-            g.drawString("Perferiell puls i vänster arm", 220,
+            g.drawString("Perferiell puls i vÃ¤nster arm", 220,
                   yPos + (5 * EXT_ROW_HEIGHT));
          else if (perfPuls[1] == 2) // left arm, no
-            g.drawString("IGEN perferiell puls i vänster arm", 220,
+            g.drawString("IGEN perferiell puls i vÃ¤nster arm", 220,
                   yPos + (5 * EXT_ROW_HEIGHT));
          if (perfPuls[2] == 1)   // right leg, yes
-            g.drawString("Perferiell puls i höger ben", 220,
+            g.drawString("Perferiell puls i hÃ¶ger ben", 220,
                   yPos + (6 * EXT_ROW_HEIGHT));
          else if (perfPuls[2] == 2) // right leg, no
-            g.drawString("IGEN perferiell puls i höger ben", 220,
+            g.drawString("IGEN perferiell puls i hÃ¶ger ben", 220,
                   yPos + (6 * EXT_ROW_HEIGHT));
          if (perfPuls[3] == 1)   // left leg, yes
-            g.drawString("Perferiell puls i vänster ben", 220,
+            g.drawString("Perferiell puls i vÃ¤nster ben", 220,
                   yPos + (7 * EXT_ROW_HEIGHT));
          else if (perfPuls[3] == 2) // left leg, no
-            g.drawString("IGEN perferiell puls i vänster ben", 220,
+            g.drawString("IGEN perferiell puls i vÃ¤nster ben", 220,
                  yPos + (7 * EXT_ROW_HEIGHT));
          yPos += 272;
          g.drawLine(1, yPos, width, yPos);
@@ -1233,7 +1233,7 @@ public class PrintPanel extends JPanel implements Printable, MessageInterface
       {
          yPos += EXX_ROW_HEIGHT;
          g.setFont(bold12);
-         g.drawString("Övrigt", 3, yPos - 1);
+         g.drawString("Ã–vrigt", 3, yPos - 1);
          g.setFont(norm10);
          for (int i=0 ; i < miscTextVec.size() ; i++)
          {

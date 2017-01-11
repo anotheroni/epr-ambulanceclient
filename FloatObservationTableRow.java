@@ -236,11 +236,11 @@ public class FloatObservationTableRow implements ObservationTableRowInterface,
       try { // Check if the string contains only numbers
          fVal = Float.parseFloat(val);
       } catch(NumberFormatException e) {
-         return "Värdet måste vara ett tal";
+         return "VÃ¤rdet mÃ¥ste vara ett tal";
       }
 
       if (fVal > maxVal || fVal < minVal) // Check that is a valid number
-         return "Värdet måste vara mellan " + minVal + " och " + maxVal;
+         return "VÃ¤rdet mÃ¥ste vara mellan " + minVal + " och " + maxVal;
 
       try {    // Insert the new value
          values.setElementAt(val, col);

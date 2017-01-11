@@ -76,7 +76,7 @@ public class AmbulanceRecord extends JFrame
 
       openBt = new JButton(new ImageIcon("images/Open24.gif"));
       openBt.setMargin(ins);
-      openBt.setToolTipText("Öppna journal");
+      openBt.setToolTipText("Ã–ppna journal");
       openBt.setEnabled(false);
       openBt.setActionCommand("open");
       openBt.addActionListener(listener);
@@ -161,7 +161,7 @@ public class AmbulanceRecord extends JFrame
       JScrollPane recordScrollPane = new JScrollPane(recordTable);
  
       recordScrollPane.setBorder(BorderFactory.createTitledBorder(
-               "Tillgängliga journaler"));
+               "TillgÃ¤ngliga journaler"));
      
       // Status Fld
       statusFld = new StatusField(new Font("Default", Font.PLAIN, 12));
@@ -236,8 +236,8 @@ public class AmbulanceRecord extends JFrame
       if (row != -1)
       {
          int res = JOptionPane.showConfirmDialog(this,
-               "Journalen kommer efter sändning att tas bort från den " +
-               "lokala klienten, fortsät sändning?",
+               "Journalen kommer efter sÃ¤ndning att tas bort frÃ¥n den " +
+               "lokala klienten, fortsÃ¤t sÃ¤ndning?",
                "Skicka journal till servern", 
                JOptionPane.YES_NO_OPTION);
          if (res == JOptionPane.NO_OPTION)
@@ -250,8 +250,8 @@ public class AmbulanceRecord extends JFrame
             if (pr.getRecordId() == id)
             {
                JOptionPane.showMessageDialog(this,
-                     "Journalen är öppen, stäng den och försök igen",
-                     "Sändningsfel", JOptionPane.ERROR_MESSAGE);
+                     "Journalen Ã¤r Ã¶ppen, stÃ¤ng den och fÃ¶rsÃ¶k igen",
+                     "SÃ¤ndningsfel", JOptionPane.ERROR_MESSAGE);
                return;
             }
          }
@@ -261,7 +261,7 @@ public class AmbulanceRecord extends JFrame
                "Skickar journalen till servern", lg, dbcon, t);
       }
       else
-         statusFld.setText("Ingen journal är vald!");
+         statusFld.setText("Ingen journal Ã¤r vald!");
    }
 
    /**
@@ -301,7 +301,7 @@ public class AmbulanceRecord extends JFrame
                   oldId);
          } catch (SQLException e) {
             JOptionPane.showMessageDialog(this,
-                  "Sändingen lyckades, men journalen kunde inte tas bort");
+                  "SÃ¤ndingen lyckades, men journalen kunde inte tas bort");
             lg.addLog(new Log(e.getMessage(),
                     "AmbulanceRecord/resultsFromSend",
                     "Remove record failed"));
@@ -309,7 +309,7 @@ public class AmbulanceRecord extends JFrame
             return;
          }
          recordTModel.updateTable();
-         sendDialog.setMessage("Sändningen lyckades");
+         sendDialog.setMessage("SÃ¤ndningen lyckades");
          sendDialog.addOk();
          sendDialog = null;
       }
@@ -342,7 +342,7 @@ public class AmbulanceRecord extends JFrame
          patientRecords.add(pr);
       }
       else
-         statusFld.setText("Ingen journal är vald!");
+         statusFld.setText("Ingen journal Ã¤r vald!");
    }
  
    /**
@@ -369,7 +369,7 @@ public class AmbulanceRecord extends JFrame
       if (row != -1)
          new PrintRecordFrame(dbcon, lg, recordTModel.getRowId(row));
       else
-         statusFld.setText("Ingen journal är vald!");
+         statusFld.setText("Ingen journal Ã¤r vald!");
    }
 
    /**
@@ -390,7 +390,7 @@ public class AmbulanceRecord extends JFrame
             rs.next();
             if (rs.getTimestamp(1) != null)
             {
-               statusFld.setText("Journalen är redan signerad");
+               statusFld.setText("Journalen Ã¤r redan signerad");
                rs.close();
                return;
             }
@@ -403,7 +403,7 @@ public class AmbulanceRecord extends JFrame
          }
 
          int res = JOptionPane.showConfirmDialog(this,
-               "En signerad journal kan ej ändras, vill du signera?",
+               "En signerad journal kan ej Ã¤ndras, vill du signera?",
                "Signera journal", 
                JOptionPane.YES_NO_OPTION);
          if (res == JOptionPane.NO_OPTION)
@@ -493,7 +493,7 @@ public class AmbulanceRecord extends JFrame
          }
       } 
       else
-         statusFld.setText("Ingen journal är vald!");
+         statusFld.setText("Ingen journal Ã¤r vald!");
    }
    
    /**
@@ -538,7 +538,7 @@ public class AmbulanceRecord extends JFrame
          lg.addLog(new Log(e.getMessage(),
                   "AmbulanceRecord/login",
                   "Find user"));
-         return "Användaren hittades inte i databasen";
+         return "AnvÃ¤ndaren hittades inte i databasen";
       }
 
       try {
@@ -572,8 +572,8 @@ public class AmbulanceRecord extends JFrame
                         "STAFF_ID = " + user);
                   dbcon.dbQueryUpdate (
                         "UPDATE EPR.BLOCKED_USERS SET FAILED_ATTEMPTS = 3");
-                  return "Felaktigt lösenord, kontot är låst kontakta " +
-                     "administratören";
+                  return "Felaktigt lÃ¶senord, kontot Ã¤r lÃ¥st kontakta " +
+                     "administratÃ¶ren";
                }
                dbcon.dbQueryUpdate (
                      "UPDATE EPR.BLOCKED_USERS SET FAILED_ATTEMPTS = " +
@@ -589,7 +589,7 @@ public class AmbulanceRecord extends JFrame
                     "AmbulanceRecord/login",
                     "Blocked users"));
          }
-         return "Felaktigt lösenord";
+         return "Felaktigt lÃ¶senord";
       }
 
       logBt.setIcon(new ImageIcon("images/Lock24.gif"));
@@ -759,7 +759,7 @@ public class AmbulanceRecord extends JFrame
          rk = new RegisterKey();
       } catch (Exception e) {
          JOptionPane.showMessageDialog(null,
-               "Kan inte ladda inställningar från registret");
+               "Kan inte ladda instÃ¤llningar frÃ¥n registret");
          System.exit(1);
       }
       // Connect to the database

@@ -234,11 +234,11 @@ public class StdObservationTableRow implements ObservationTableRowInterface,
       try { // Check if the string contains only numbers
          iVal = Integer.parseInt(val, 10);
       } catch(NumberFormatException e) {
-         return "Värdet måste vara ett tal";
+         return "VÃ¤rdet mÃ¥ste vara ett tal";
       }
 
       if (iVal > maxVal || iVal < minVal) // Check that is a valid number
-         return "Värdet måste vara mellan " + minVal + " och " + maxVal;
+         return "VÃ¤rdet mÃ¥ste vara mellan " + minVal + " och " + maxVal;
 
       try {    // Insert the new value
          values.setElementAt(val, col);

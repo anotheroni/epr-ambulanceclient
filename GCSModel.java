@@ -28,25 +28,25 @@ public class GCSModel
 
    private final String[] eyeValues = {
       "4 - Normal/Spontan",
-      "3 - Öppnas vid tilltal",
-      "2 - Öppnas vid smärta",
+      "3 - Ã–ppnas vid tilltal",
+      "2 - Ã–ppnas vid smÃ¤rta",
       "1 - Ingen reaktion"
    };
 
    private final String[] speechValues = {
       "5 - Orienterad",
-      "4 - Förvirrad",
-      "3 - Osammanhängande begripbara ord",
+      "4 - FÃ¶rvirrad",
+      "3 - OsammanhÃ¤ngande begripbara ord",
       "2 - Grymtningar",
       "1 - Igen reaktion"
    };
 
    private final String[] moveValues = {
       "6 - Lyder uppmaningar",
-      "5 - Lokaliserar smärta",
+      "5 - Lokaliserar smÃ¤rta",
       "4 - Drar undan",
-      "3 - Böjer",
-      "2 - Sträcker",
+      "3 - BÃ¶jer",
+      "2 - StrÃ¤cker",
       "1 - Ingen reaktion"
    };
 
@@ -71,11 +71,11 @@ public class GCSModel
       rows = new GCSObservationTableRow[3];
 
       rows[0] = new GCSObservationTableRow(this, 0, eyeValues,
-           "GCS ögon");
+           "GCS Ã¶gon");
       rows[1] = new GCSObservationTableRow(this, 1, speechValues,
             "GCS tilltal");
       rows[2] = new GCSObservationTableRow(this, 2, moveValues,
-            "GCS rörelser");
+            "GCS rÃ¶relser");
 
       values = new Vector[3];
       values[0] = new Vector();

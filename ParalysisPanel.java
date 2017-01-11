@@ -43,9 +43,9 @@ public class ParalysisPanel extends JPanel
          paralysisImgsRight[i].setDescription("H. " + description[i]);
       }
 
-      JLabel leftLbl = new JLabel("Vänster sida");
+      JLabel leftLbl = new JLabel("VÃ¤nster sida");
       leftLbl.setBounds(130, 15, 90, 25);
-      JLabel rightLbl = new JLabel("Höger sida");
+      JLabel rightLbl = new JLabel("HÃ¶ger sida");
       rightLbl.setBounds(10, 15, 90, 25);
 
       // Create the list
@@ -73,7 +73,7 @@ public class ParalysisPanel extends JPanel
 
       setLayout(null);
       setSize(250,325);
-      setBorder(BorderFactory.createTitledBorder("Förlamning"));
+      setBorder(BorderFactory.createTitledBorder("FÃ¶rlamning"));
 
       add(leftLbl);
       add(rightLbl);

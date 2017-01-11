@@ -166,7 +166,7 @@ public class AmbulanceClientPatient implements Runnable {
                     "Falied to close socket/streams");
             lgHandler.addLog(log);
 
-            rip.setMessage("Uppkopplingen kan inte stängas");
+            rip.setMessage("Uppkopplingen kan inte stÃ¤ngas");
         }
     }
 
@@ -204,7 +204,7 @@ public class AmbulanceClientPatient implements Runnable {
                     "Security problem");
             lgHandler.addLog(log);
 
-            rip.setMessage("Certifikaten är ej giltiga");
+            rip.setMessage("Certifikaten Ã¤r ej giltiga");
 
             return;
         } catch (IOException ie) {
@@ -213,7 +213,7 @@ public class AmbulanceClientPatient implements Runnable {
                     "Failed to read certificates");
             lgHandler.addLog(log);
 
-            rip.setMessage("Kunde inte läsa certifikaten");
+            rip.setMessage("Kunde inte lÃ¤sa certifikaten");
 
             return;
         }
@@ -244,7 +244,7 @@ public class AmbulanceClientPatient implements Runnable {
                         "Failed to create socket/streams");
                 lgHandler.addLog(log);
 
-                rip.setMessage("Får ingen kontakt med servern");
+                rip.setMessage("FÃ¥r ingen kontakt med servern");
 
                 try {
                     sleep(10);
@@ -264,7 +264,7 @@ public class AmbulanceClientPatient implements Runnable {
         if (terminateStatus)
             return;
         
-        rip.setMessage("Skickar förfråga till servern");
+        rip.setMessage("Skickar fÃ¶rfrÃ¥ga till servern");
 
         // Try to send the packet to the server
         while(!terminateStatus) {
@@ -278,7 +278,7 @@ public class AmbulanceClientPatient implements Runnable {
                         "Failed to send the packet");
                 lgHandler.addLog(log);
 
-                rip.setMessage("Kunde inte skicka förfrågan till servern");
+                rip.setMessage("Kunde inte skicka fÃ¶rfrÃ¥gan till servern");
                 try {
                     sleep(10);
                 } catch (InterruptedException IE) {
@@ -295,7 +295,7 @@ public class AmbulanceClientPatient implements Runnable {
 
         if (!terminateStatus) {
             try {
-                rip.setMessage("Väntar på svar från servern");
+                rip.setMessage("VÃ¤ntar pÃ¥ svar frÃ¥n servern");
                 //read the update packet from the stream
                 api = (AmbulancePatientInformation)ois.readObject();
 
@@ -328,7 +328,7 @@ public class AmbulanceClientPatient implements Runnable {
                 lgHandler.addLog(log);
 
                 rip.setMessage("Paket versionen i server och " +
-                        "klienten är olika");
+                        "klienten Ã¤r olika");
                 terminate();
             }
         }

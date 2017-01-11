@@ -109,7 +109,7 @@ public class ClientKeytool {
         //If there are less than 10 days left 
         if(date.compareTo(tenDays) <= 0) {
             message = message + "Certifikatet " + keyStoreName +
-                " går ut " + formatter.format(date) + ". Kontakta admin!";
+                " gÃ¥r ut " + formatter.format(date) + ". Kontakta admin!";
         }
     }
 

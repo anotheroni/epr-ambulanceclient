@@ -98,16 +98,16 @@ public class UpdatePacket implements Serializable {
                 resultSet = dbcon.dbQuery(query);
 
                 if (resultSet.next()) {
-                    serverMessage = "Anv‰ndaren " + 
+                    serverMessage = "Anv√§ndaren " + 
                         resultSet.getString("FIRST_NAME") + " " + 
                         resultSet.getString("LAST_NAME") + 
-                        " ‰r redan blockerad\n";
+                        " √§r redan blockerad\n";
                     continue;
                 }
             } catch (SQLException sql) {
                 serverMessage = serverMessage + "Fel hos server. " +
-                    "Kunde inte slÂ upp blockerade anv‰ndare.\n" +
-                    "Anv‰ndare ID = " + userId.intValue() + " " +
+                    "Kunde inte sl√• upp blockerade anv√§ndare.\n" +
+                    "Anv√§ndare ID = " + userId.intValue() + " " +
                     sql.getMessage() + "\n";
 
                 log = new Log(sql.getMessage(), 
@@ -133,7 +133,7 @@ public class UpdatePacket implements Serializable {
                 dbcon.dbQueryUpdate (query);
             } catch (SQLException sql) {
                 try {
-                    serverMessage = serverMessage + "Anv‰ndaren " + 
+                    serverMessage = serverMessage + "Anv√§ndaren " + 
                         resultSet.getString("FIRST_NAME") + " " + 
                         resultSet.getString("LAST_NAME") + 
                         " kunde inte blockeras.\n" + sql.getMessage() +
@@ -171,12 +171,12 @@ public class UpdatePacket implements Serializable {
             } catch (SQLException sql) {
                 try {
                     serverMessage = serverMessage + "Server Fel.\n" +
-                        "Andra klienter kommer ej kunna fÂ denna " +
-                        "updatering. Kontakta administratˆren!\n" +
-                        "ƒrendet g‰ller anv‰ndare \n" + 
+                        "Andra klienter kommer ej kunna f√• denna " +
+                        "updatering. Kontakta administrat√∂ren!\n" +
+                        "√Ñrendet g√§ller anv√§ndare \n" + 
                         resultSet.getString("FIRST_NAME") + " " + 
                         resultSet.getString("LAST_NAME") + 
-                        "med anv‰ndar Id = " + userId.intValue() + "\n" +
+                        "med anv√§ndar Id = " + userId.intValue() + "\n" +
                         sql.getMessage() + "\n";
 
                     log = new Log(sql.getMessage(),
@@ -201,7 +201,7 @@ public class UpdatePacket implements Serializable {
             }
 
             try {
-                serverMessage = serverMessage + "Anv‰ndaren " + 
+                serverMessage = serverMessage + "Anv√§ndaren " + 
                     resultSet.getString("FIRST_NAME") + " " + 
                     resultSet.getString("LAST_NAME") + 
                     " har blockerats.\n";
@@ -225,13 +225,13 @@ public class UpdatePacket implements Serializable {
             resultSet = dbcon.dbQuery(query);
 
             if (!resultSet.next()) {
-                message =  "Klienten " + clientId + " ‰r ej valid.";
+                message =  "Klienten " + clientId + " √§r ej valid.";
                 updateFailed = true;
                 return;
             }
             /*If the execution goes wrong, save a log to inform the client*/
         } catch (SQLException sql) {
-            message = "Servern misslyckades med att slÂ upp klient ide.";
+            message = "Servern misslyckades med att sl√• upp klient ide.";
 
             log = new Log(sql.getMessage(),
                     "UpdatePacket/readUpdates",
@@ -267,7 +267,7 @@ public class UpdatePacket implements Serializable {
 
                 //If there are not any updates to fetch
                 if (!resultSet.next()) {
-                    message = "Det fanns inga uppdateringar att h‰mta.";
+                    message = "Det fanns inga uppdateringar att h√§mta.";
                     return;
                 }
 
@@ -281,7 +281,7 @@ public class UpdatePacket implements Serializable {
                 /*If queries failed, save a log to inform the client 
                   that updates could not be fetched*/
             } catch (SQLException sql) {
-                message = "Servern misslyckades med att h‰mta uppdateringar.";
+                message = "Servern misslyckades med att h√§mta uppdateringar.";
 
                 log = new Log(sql.getMessage(),
                         "UpdatePacket/readUpdates",
@@ -336,7 +336,7 @@ public class UpdatePacket implements Serializable {
 
                 //If there are not any updates to fetch
                 if (!resultSet.next()) {
-                    message = "Det fanns inga uppdateringar att h‰mta.";
+                    message = "Det fanns inga uppdateringar att h√§mta.";
                     return;
                 }
 
@@ -349,7 +349,7 @@ public class UpdatePacket implements Serializable {
 
                 /*If the query failed, save a log to inform the client*/
             } catch (SQLException sql) {
-                message = "Servern misslyckades med att h‰mta uppdateringar.";
+                message = "Servern misslyckades med att h√§mta uppdateringar.";
 
                 log = new Log(sql.getMessage(), 
                         "UpdatePacket/readUpdates",
@@ -427,7 +427,7 @@ public class UpdatePacket implements Serializable {
             } catch (SQLException sql) {
                 message = "Kunde inte uppdatera " +
                     "DATABASE_MESSAGE/SERVER_CONTACT_TIME. " +
-                    "Kontakta administratˆren!";
+                    "Kontakta administrat√∂ren!";
 
                 log = new Log(sql.getMessage(),
                         "UpdatePacket/writeUpdates",
@@ -495,14 +495,14 @@ public class UpdatePacket implements Serializable {
               and it goes wrong */
             if ((queryCount == 0) && (!regularUpdate)) {
                 message = "Klienten kunde inte konfigureras. " +
-                    "Kontakta administratˆren.";
+                    "Kontakta administrat√∂ren.";
                 updateFailed = true;
                 return;
             }
 
             /*If the client doing a regular update and it goes wrong*/
             if((queryCount == 0) && (regularUpdate)) {
-                message = "Kunde inte utfˆra uppdateringarna. Fˆrsˆk igen.";
+                message = "Kunde inte utf√∂ra uppdateringarna. F√∂rs√∂k igen.";
                 updateFailed = true;
                 return;
             }
@@ -517,7 +517,7 @@ public class UpdatePacket implements Serializable {
             //System.err.println("SQLEXCEPtion: " + sql.getMessage());
 
             message = "Klientens konfigurationstabell kunde inte uppdateras." +
-                "Kontakta administratˆren";
+                "Kontakta administrat√∂ren";
 
             log = new Log(sql.getMessage(),
                     "UpdatePacket/writeUpdates",

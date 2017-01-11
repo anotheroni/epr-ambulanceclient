@@ -25,7 +25,7 @@ public class DelegationDialog extends JDialog implements AdminDialog
      */
    public DelegationDialog(AmbulanceRecord ar, Vector medVec)
    {
-      super((Frame)ar, "Ange delegerande läkare", true);
+      super((Frame)ar, "Ange delegerande lÃ¤kare", true);
       setSize(220, 240);
       setResizable(false);
       
@@ -36,7 +36,7 @@ public class DelegationDialog extends JDialog implements AdminDialog
 
       Dialog_Listener listener = new Dialog_Listener(this);
 
-      JLabel infoLbl = new JLabel("Följande mediciner kräver en delegation:");
+      JLabel infoLbl = new JLabel("FÃ¶ljande mediciner krÃ¤ver en delegation:");
       infoLbl.setFont(new Font("Default", Font.PLAIN, 10));
       infoLbl.setBounds(10,10,200,25);
 
@@ -45,7 +45,7 @@ public class DelegationDialog extends JDialog implements AdminDialog
       JScrollPane medScrollPane = new JScrollPane(medList);
       medScrollPane.setBounds(10,40,200,100);
             
-      JLabel nameLbl = new JLabel("Läkare");
+      JLabel nameLbl = new JLabel("LÃ¤kare");
       nameLbl.setBounds(10, 150, 70, 25);
       nameFld = new JTextField(10);
       nameFld.setBounds(80, 150, 115, 25);
@@ -83,7 +83,7 @@ public class DelegationDialog extends JDialog implements AdminDialog
    {
       if (nameFld.getText().length() < 1)
       {
-         JOptionPane.showMessageDialog(this, "En läkare måste anges");
+         JOptionPane.showMessageDialog(this, "En lÃ¤kare mÃ¥ste anges");
          return;
       }
       result = nameFld.getText();

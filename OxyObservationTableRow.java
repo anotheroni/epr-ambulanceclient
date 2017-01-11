@@ -61,12 +61,12 @@ public class OxyObservationTableRow extends StdObservationTableRow
          try { // Check if the string contains only numbers
             iVal = Integer.parseInt (numVal, 10);
          } catch (NumberFormatException e) {
-            return "Mängden syre måste anges som ett heltal. " +
+            return "MÃ¤ngden syre mÃ¥ste anges som ett heltal. " +
                "Anges det i % avsluta med ett %-tecken.";
          }
 
          if (iVal > 100 || iVal < 21)  // Check that it's a valid number
-            return "%-halten syre måste vara mellan 21 och 100";
+            return "%-halten syre mÃ¥ste vara mellan 21 och 100";
 
          // Convert to liters
          int liters = (int) ((iVal - 21) / 3.5);
@@ -77,12 +77,12 @@ public class OxyObservationTableRow extends StdObservationTableRow
          try { // Check if the string contains only numbers
             iVal = Integer.parseInt(val, 10);
          } catch(NumberFormatException e) {
-            return "Mängden syre måste anges som ett heltal. " +
+            return "MÃ¤ngden syre mÃ¥ste anges som ett heltal. " +
                "Anges det i % avsluta med ett %-tecken.";
          }
 
          if (iVal > maxVal || iVal < minVal) // Check that it's a valid number
-            return "Mänden syre måste vara mellan " + minVal + " och " +
+            return "MÃ¤nden syre mÃ¥ste vara mellan " + minVal + " och " +
                maxVal + " liter";
       }
 

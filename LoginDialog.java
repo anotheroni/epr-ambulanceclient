@@ -100,7 +100,7 @@ public class LoginDialog extends JDialog implements KeyListener
       ListEntry users[];
       users = getUserIds(uid, did);  // Fetch users from the database
 
-      JLabel driverLbl = new JLabel("Förare");
+      JLabel driverLbl = new JLabel("FÃ¶rare");
       driverLbl.setBounds(10, 90, 60, 25);
       driverCBox = new JComboBox(users);
       driverCBox.setBounds(70, 90, 115, 25);
@@ -110,7 +110,7 @@ public class LoginDialog extends JDialog implements KeyListener
             driverCBox.setSelectedIndex(did_idx);
          } catch (IllegalArgumentException e) { } // Needed when the db is empty
 
-      JLabel userLbl = new JLabel("Vårdare");
+      JLabel userLbl = new JLabel("VÃ¥rdare");
       userLbl.setBounds(10, 125, 60, 25);
       userCBox = new JComboBox(users);
       userCBox.setBounds(70, 125, 115, 25);
@@ -120,7 +120,7 @@ public class LoginDialog extends JDialog implements KeyListener
             userCBox.setSelectedIndex(uid_idx);
          } catch (IllegalArgumentException e) { } // Needed when the db is empty
 
-      JLabel passwdLbl = new JLabel("Lösenord");
+      JLabel passwdLbl = new JLabel("LÃ¶senord");
       passwdLbl.setBounds(10, 160, 60, 25);
       passwdFld = new JPasswordField();
       passwdFld.setBounds(70, 160, 115, 25);

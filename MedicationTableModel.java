@@ -18,7 +18,7 @@ public class MedicationTableModel extends AbstractTableModel
 
    private DecimalFormat df;
 
-   private String[] columnNames = {"Tid", "Medicin", "Mängd", "Sign"};
+   private String[] columnNames = {"Tid", "Medicin", "MÃ¤ngd", "Sign"};
    private boolean[] editable = {true, false, false, true};
    private Object[][] data;
    private int[] rowId;
@@ -227,7 +227,7 @@ public class MedicationTableModel extends AbstractTableModel
           } catch (SQLException e) {
              // Don't log error if the time is incorect, only give an error msg
              if (e.getSQLState().equals("22007"))
-                pr.setMessage ("Värdet är felaktigt");
+                pr.setMessage ("VÃ¤rdet Ã¤r felaktigt");
              else // Not a time error, log it
                 lg.addLog(new Log(e.getMessage(),
                          "MedicationTableModel/setValueAt",
