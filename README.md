@@ -2,7 +2,7 @@ Electronic patient record ambulance client
 
 # Build
 
-TODO
+javac AmbulanceRecord.java
 
 # Run
 
